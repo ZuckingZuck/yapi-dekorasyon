@@ -61,7 +61,7 @@ const Contact = () => {
                                 value={message}
                                 onChange={(e) => setMessage(e.target.value)}
                             ></textarea>
-                            <button type='submit' className="px-6 py-3 bg-gray-800 text-white rounded-md hover:bg-gray-900 transition duration-300">
+                            <button type='submit' className="px-6 py-3 bg-cyan-800 text-white rounded-md hover:bg-gray-900 transition duration-300">
                                 Gönder
                             </button>
                         </form>
@@ -75,17 +75,17 @@ const Contact = () => {
                         </p>
                         <div className="flex items-center mb-4">
                             <div>
-                                <p className="text-gray-800 font-semibold">YAPI DEKORASYON</p>
+                                <p className="text-gray-800 font-semibold">RMODEL</p>
                                 <p className="text-gray-600">
-                                    Armağanevler Mah. 23 Nisan Cad. No:34 / C Ümraniye / İstanbul
+                                    Sanayi, Teknopark Blv No: 1 D:9A, 34906 Pendik/İstanbul
                                 </p>
                             </div>
                         </div>
                         <p className="text-gray-600 mb-2">
-                            İletişim: +90 555 555 55 55
+                            İletişim: +90 539 276 7709
                         </p>
                         <p className="text-gray-600">
-                            Mail: iletisim@eposta.com
+                            Mail: info@rmodel.com.tr
                         </p>
                     </div>
                 </div>

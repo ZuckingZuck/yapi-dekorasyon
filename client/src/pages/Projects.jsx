@@ -1,22 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useSelector } from 'react-redux';
 
 const Projects = () => {
-    const [categories, setCategories] = useState([]);
+    const categories = useSelector((state) => state.categories.categories)
     const [projects, setProjects] = useState([]);
     const [modalOpen, setModalOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState('');
 
-    const fetchCategories = async () => {
-        try {
-            const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/client/categorie`);
-            if (response.status === 200) {
-                setCategories(response.data);
-            }
-        } catch (error) {
-            console.error('Kategorileri alırken hata oluştu:', error);
-        }
-    };
+    // const fetchCategories = async () => {
+    //     try {
+    //         const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/client/categorie`);
+    //         if (response.status === 200) {
+    //             setCategories(response.data);
+    //         }
+    //     } catch (error) {
+    //         console.error('Kategorileri alırken hata oluştu:', error);
+    //     }
+    // };
 
     const fetchProjects = async () => {
         try {
@@ -30,7 +31,6 @@ const Projects = () => {
     };
 
     useEffect(() => {
-        fetchCategories();
         fetchProjects();
     }, []);
 
@@ -53,7 +53,7 @@ const Projects = () => {
                 <h1 className="text-4xl tracking-widest font-bold drop-shadow-lg">Projelerimiz</h1>
             </div>
             <div className="container mx-auto p-8 lg:px-60 text-gray-700 my-16">
-                {categories.map((category) => (
+                {categories?.map((category) => (
                     <div key={category.id} className="mb-12">
                         <h2 className="text-2xl text-center font-semibold mb-6">{category.name}</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

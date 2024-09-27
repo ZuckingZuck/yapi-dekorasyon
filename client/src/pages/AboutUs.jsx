@@ -11,12 +11,12 @@ const AboutUs = () => {
             </div>
             <div className="container mx-auto  p-8 lg:px-60 text-gray-700 my-16">
                 <div className="space-y-6">
-                    <h2 className="text-3xl font-bold text-gray-800">YAPI DEKORASYON</h2>
+                    <h2 className="text-3xl font-bold text-gray-800">RMODEL</h2>
                     <p className="leading-relaxed">
-                        YAPI DEKORASYON uzun yıllar boyunca müşterilerinin ihtiyaçlarına ve zevklerine yönelik, fonksiyonel ve dönüşebilen çözümler sunmaktadır. Alçıpan, Gerçi tavan ve Dekorasyon alanlarında beklentilere cevap verir. Müşteri memnuniyeti odaklı, disiplinden kopmayan çalışmalarını, titiz bir uygulamayla birleştiren YAPI DEKORASYON, özgünlüğünün gücünü dinamizminin ardından alır.
+                        RMODEL uzun yıllar boyunca müşterilerinin ihtiyaçlarına ve zevklerine yönelik, fonksiyonel ve dönüşebilen çözümler sunmaktadır. Alçıpan, Gerçi tavan ve Dekorasyon alanlarında beklentilere cevap verir. Müşteri memnuniyeti odaklı, disiplinden kopmayan çalışmalarını, titiz bir uygulamayla birleştiren RMODEL, özgünlüğünün gücünü dinamizminin ardından alır.
                     </p>
                     <p className="leading-relaxed">
-                        YAPI DEKORASYON yılların verdiği bilgi birikimi ve tecrübeyle günümüze kadar gelmiş ve bu alanda başarılı işler çıkarmıştır. Her geçen gün daha da tecrübe edinen uzman kadromuz ile sizlere hizmet vermekten gurur duymaktayız.
+                        RMODEL yılların verdiği bilgi birikimi ve tecrübeyle günümüze kadar gelmiş ve bu alanda başarılı işler çıkarmıştır. Her geçen gün daha da tecrübe edinen uzman kadromuz ile sizlere hizmet vermekten gurur duymaktayız.
                     </p>
 
                     <h3 className="text-2xl font-semibold text-gray-800">Kalıcı Çözümler İçin Kusursuz Hizmetler!</h3>

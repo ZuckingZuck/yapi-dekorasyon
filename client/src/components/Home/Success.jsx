@@ -43,7 +43,7 @@ const Success = () => {
     return (
         <div
             ref={ref}
-            className='flex flex-col justify-center px-60 items-center container mx-auto border-t-2 border-b-2 pt-12 pb-12'
+            className='flex flex-col mt-10 justify-center px-60 items-center container mx-auto border-t-2 border-b-2 pt-12 pb-12'
         >
             <div className=''>
                 <div className='mb-10 text-xl text-gray-800 text-center'>
