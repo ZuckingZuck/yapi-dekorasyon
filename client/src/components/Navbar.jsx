@@ -13,6 +13,13 @@ const Navbar = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  const scrollToDiv = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
+
   const handleClickOutside = (event) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
       setIsDropdownOpen(false);
@@ -48,7 +55,7 @@ const Navbar = () => {
                 <div className="grid grid-cols-4 gap-2 p-2">
                   {
                     categories?.map((item) => {
-                      return <NavLink to="/projelerimiz" className="block px-2 py-1 hover:bg-gray-600 rounded">{item.name}</NavLink>
+                      return <NavLink onClick={() => scrollToDiv(item.name)} to="/projelerimiz" className="block px-2 py-1 hover:bg-cyan-700 rounded transition duration-150">{item.name}</NavLink>
                     })
                   }
                 </div>

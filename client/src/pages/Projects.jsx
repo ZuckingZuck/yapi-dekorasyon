@@ -54,7 +54,7 @@ const Projects = () => {
             </div>
             <div className="container mx-auto p-8 lg:px-60 text-gray-700 my-16">
                 {categories?.map((category) => (
-                    <div key={category.id} className="mb-12">
+                    <div id={category.name} key={category.id} className="mb-12">
                         <h2 className="text-2xl text-center font-semibold mb-6">{category.name}</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                             {projects

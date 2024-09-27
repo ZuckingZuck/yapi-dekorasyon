@@ -1,16 +1,16 @@
 import React from 'react'
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from 'react-router-dom';
-import {faArrowRight} from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { useSelector } from 'react-redux';
 const Footer = () => {
   const categories = useSelector((state) => state.categories.categories);
-  const scrollToTop = () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-};
+  const scrollToDiv = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
   return (
     <div className='bg-cyan-950 text-gray-200'>
       <div className='container px-60 py-10 mx-auto'>
@@ -19,7 +19,7 @@ const Footer = () => {
         <ul className='grid grid-cols-4 gap-3 mt-4'>
           {
             categories?.map((item) => {
-              return <li><NavLink onClick={scrollToTop} to={"/projelerimiz"}><FontAwesomeIcon icon={faArrowRight}/> {item.name}</NavLink></li>
+              return <li><NavLink to={"/projelerimiz"} onClick={() => scrollToDiv(item.name)} ><FontAwesomeIcon icon={faArrowRight} /> {item.name}</NavLink></li>
             })
           }
         </ul>
