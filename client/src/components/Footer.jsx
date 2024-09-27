@@ -26,7 +26,7 @@ const Footer = () => {
       </div>
       <hr />
       <div className='container mx-auto px-60 py-5 text-lg'>
-        <p>Yapı Dekorasyon Tüm Hakları Saklıdır. <a className='underline text-white' href="https://www.ipssolidarity.com/">IPSS</a> tarafından geliştirildi.</p>
+        <p>RModel Tüm Hakları Saklıdır. <a className='underline text-white' href="https://www.ipssolidarity.com/">IPSS</a> tarafından geliştirildi.</p>
       </div>
     </div>
   )
