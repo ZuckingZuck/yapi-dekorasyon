@@ -27,9 +27,9 @@ const Introduction = () => {
                 <NavLink onClick={scrollToTop} to="/projelerimiz" className="bg-cyan-900 opacity-85 hover:opacity-100 duration-200 px-3 py-2 rounded text-white flex items-center justify-between">Projelerimiz <FontAwesomeIcon icon={faLayerGroup} /></NavLink>
             </div>
             <div id='images' className='flex gap-6'>
-                <img className='h-[450px] cursor-pointer hover:touch-pinch-zoom transition-transform duration-300 ease-in-out transform hover:scale-110 w-64 object-cover rounded-md shadow-lg' src="https://www.yapidekorasyon.com.tr/wp-content/uploads/2015/11/home_renovate2_work3.jpg" alt="img1" />
-                <img className='h-[450px] cursor-pointer hover:touch-pinch-zoom transition-transform duration-300 ease-in-out transform hover:scale-110 w-64 object-cover rounded-md shadow-lg' src="https://www.yapidekorasyon.com.tr/wp-content/uploads/2015/11/home_renovate2_work5.jpg" alt="img2" />
-                <img className='h-[450px] cursor-pointer hover:touch-pinch-zoom transition-transform duration-300 ease-in-out transform hover:scale-110 w-64 object-cover rounded-md shadow-lg' src="https://www.yapidekorasyon.com.tr/wp-content/uploads/2015/11/home_renovate2_work4.jpg" alt="img3" />
+                <img className='h-[450px] cursor-pointer hover:touch-pinch-zoom transition-transform duration-300 ease-in-out transform hover:scale-110 w-64 object-cover rounded-md shadow-lg' src="./banner1.jpg" alt="img1" />
+                <img className='h-[450px] cursor-pointer hover:touch-pinch-zoom transition-transform duration-300 ease-in-out transform hover:scale-110 w-64 object-cover rounded-md shadow-lg' src="./banner2.jpg" alt="img2" />
+                <img className='h-[450px] cursor-pointer hover:touch-pinch-zoom transition-transform duration-300 ease-in-out transform hover:scale-110 w-64 object-cover rounded-md shadow-lg' src="./banner3.jpg" alt="img3" />
             </div>
         </div>
     )

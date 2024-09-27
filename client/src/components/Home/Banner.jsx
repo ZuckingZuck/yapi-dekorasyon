@@ -22,6 +22,7 @@ const Banner = () => {
                         <p>Dekorasyona mı ihtiyacınız var?</p>
                         <p>Bizimle iletişime geçin</p>
                         <p>+90 539 276 7709</p>
+                        <p>fix@ipssolidarity.com</p>
                     </div>
                     <NavLink onClick={scrollToTop} to="/iletisim" className="bg-cyan-900  text-white py-2 px-5 hover:scale-110 duration-200 rounded"><FontAwesomeIcon icon={faEnvelope}/> Mesaj Bırakın</NavLink>
                 </div>

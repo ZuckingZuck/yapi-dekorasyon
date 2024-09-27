@@ -21,7 +21,7 @@ const Operations = () => {
           <div>
             <img
               className={`w-[500px] transition-transform duration-1000 ${inView1 ? 'scale-100' : 'scale-90'}`}
-              src="https://www.yapidekorasyon.com.tr/wp-content/uploads/2021/08/tadilat.jpg"
+              src="./tadilat.jpg"
               alt="img"
               ref={ref1}
             />

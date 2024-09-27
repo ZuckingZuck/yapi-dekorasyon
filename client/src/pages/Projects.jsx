@@ -50,7 +50,7 @@ const Projects = () => {
                 className="relative w-full h-72 bg-cover bg-center text-white flex items-center justify-center"
                 style={{ backgroundImage: "url('https://favoriyapi.com.tr/wp-content/uploads/2022/02/Favori-blog-gorsel-3.jpg')", backgroundAttachment: 'fixed' }}
             >
-                <h1 className="text-4xl tracking-widest font-bold drop-shadow-lg">Projelerimiz</h1>
+                <h1 className="text-4xl tracking-widest font-bold drop-shadow-lg">Hizmetlerimiz</h1>
             </div>
             <div className="container mx-auto p-8 lg:px-60 text-gray-700 my-16">
                 {categories?.map((category) => (

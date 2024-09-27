@@ -85,7 +85,7 @@ const Contact = () => {
                             İletişim: +90 539 276 7709
                         </p>
                         <p className="text-gray-600">
-                            Mail: info@rmodel.com.tr
+                            Mail: fix@ipssolidarity.com
                         </p>
                     </div>
                 </div>
