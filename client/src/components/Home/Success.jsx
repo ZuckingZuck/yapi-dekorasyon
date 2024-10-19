@@ -43,14 +43,14 @@ const Success = () => {
     return (
         <div
             ref={ref}
-            className='flex flex-col mt-10 justify-center px-60 items-center container mx-auto border-t-2 border-b-2 pt-12 pb-12'
+            className='flex flex-col mt-10 justify-center px-6 md:px-60 items-center container mx-auto border-t-2 border-b-2 pt-12 pb-12'
         >
-            <div className=''>
+            <div>
                 <div className='mb-10 text-xl text-gray-800 text-center'>
                     <h1>ŞİMDİYE KADARKİ BAŞARILARIMIZ</h1>
                 </div>
                 <div className='flex flex-col md:flex-row gap-10 md:gap-52'>
-                    <div className='flex flex-col md:flex-row md:gap-5'>
+                    <div className='flex flex-col items-center md:flex-row md:gap-5'>
                         <div>
                             <img
                                 className='w-14'
@@ -58,14 +58,14 @@ const Success = () => {
                                 alt="icon"
                             />
                         </div>
-                        <div>
+                        <div className='text-center md:text-left'>
                             <animated.p className='text-5xl'>
                                 {countSpring.number.to(n => n.toFixed(0))}
                             </animated.p>
                             <p className='text-gray-600 text-lg'>İşlem</p>
                         </div>
                     </div>
-                    <div className='flex flex-col md:flex-row gap-5'>
+                    <div className='flex flex-col items-center md:flex-row gap-5'>
                         <div>
                             <img
                                 className='w-14'
@@ -73,7 +73,7 @@ const Success = () => {
                                 alt="icon"
                             />
                         </div>
-                        <div>
+                        <div className='text-center md:text-left'>
                             <animated.p className='text-5xl'>
                                 {teamSpring.number.to(n => n.toFixed(0))}
                             </animated.p>
