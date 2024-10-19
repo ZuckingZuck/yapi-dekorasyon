@@ -49,8 +49,8 @@ const Success = () => {
                 <div className='mb-10 text-xl text-gray-800 text-center'>
                     <h1>ŞİMDİYE KADARKİ BAŞARILARIMIZ</h1>
                 </div>
-                <div className='flex gap-52'>
-                    <div className='flex gap-5'>
+                <div className='flex flex-col md:flex-row gap-10 md:gap-52'>
+                    <div className='flex flex-col md:flex-row md:gap-5'>
                         <div>
                             <img
                                 className='w-14'
@@ -65,7 +65,7 @@ const Success = () => {
                             <p className='text-gray-600 text-lg'>İşlem</p>
                         </div>
                     </div>
-                    <div className='flex gap-5'>
+                    <div className='flex flex-col md:flex-row gap-5'>
                         <div>
                             <img
                                 className='w-14'

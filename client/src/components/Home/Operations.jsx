@@ -11,22 +11,22 @@ const Operations = () => {
 
   return (
     <div className='mt-20 bg-[#f1f1f1]'>
-      <div className='container mx-auto px-60 flex flex-col items-center'>
+      <div className='container mx-auto px-6 md:px-20 lg:px-40 xl:px-60 flex flex-col items-center'>
         <div className='mb-16 mt-16'>
-          <p className='tracking-wide text-lg opacity-75 text-blue-800'>
+          <p className='tracking-wide text-lg opacity-75 text-blue-800 text-center'>
             Birbirinden farklı, kaliteli ve konforlu uygulamalar burada
           </p>
         </div>
-        <div className='flex items-center w-full gap-20 mb-20'>
-          <div>
+        <div className='flex flex-col md:flex-row items-center w-full gap-10 md:gap-20 mb-20'>
+          <div className='w-full md:w-1/2'>
             <img
-              className={`w-[500px] transition-transform duration-1000 ${inView1 ? 'scale-100' : 'scale-90'}`}
+              className={`w-full transition-transform duration-1000 ${inView1 ? 'scale-100' : 'scale-90'}`}
               src="./tadilat.jpg"
               alt="img"
               ref={ref1}
             />
           </div>
-          <div className='grid grid-cols-3 gap-28'>
+          <div className='grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-10 lg:gap-28'>
             <div
               className={`flex flex-col justify-center items-center transition-opacity duration-1000 ${inView2 ? 'opacity-100' : 'opacity-50'}`}
               ref={ref2}

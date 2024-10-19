@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 const Contact = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -25,24 +26,24 @@ const Contact = () => {
     return (
         <div>
             <div></div>
-            <div className="container mx-auto my-16 px-60">
+            <div className="container mx-auto my-16 px-4 md:px-16 lg:px-32">
                 <div className="flex flex-col md:flex-row gap-10 justify-between">
                     {/* Form Alanı */}
                     <div className="md:w-2/3">
                         <h2 className="text-4xl font-semibold mb-6 text-gray-800">Bizimle iletişime geçin</h2>
                         <form onSubmit={handleSubmit} className="space-y-4">
-                            <div className="flex space-x-4">
+                            <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
                                 <input
                                     type="text"
                                     placeholder="Adınız"
-                                    className="w-1/2 p-4 border border-gray-300 rounded-md"
+                                    className="w-full md:w-1/2 p-4 border border-gray-300 rounded-md"
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
                                 />
                                 <input
                                     type="email"
                                     placeholder="E-mail"
-                                    className="w-1/2 p-4 border border-gray-300 rounded-md"
+                                    className="w-full md:w-1/2 p-4 border border-gray-300 rounded-md"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                 />
@@ -92,7 +93,7 @@ const Contact = () => {
             </div>
             <ToastContainer />
         </div>
-    )
+    );
 }
 
 export default Contact;
