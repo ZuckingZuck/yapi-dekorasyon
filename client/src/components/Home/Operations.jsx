@@ -1,79 +1,70 @@
+
 import React from 'react';
-import { useInView } from 'react-intersection-observer';
+
+const operationsData = [
+  {
+    icon: 'https://cdn-icons-png.flaticon.com/128/7889/7889802.png',
+    title: 'Tasarım',
+  },
+  {
+    icon: 'https://cdn-icons-png.flaticon.com/128/3374/3374344.png',
+    title: 'Dekorasyon',
+  },
+  {
+    icon: 'https://cdn-icons-png.flaticon.com/128/16456/16456353.png',
+    title: 'Dış Cephe',
+  },
+  {
+    icon: 'https://cdn-icons-png.flaticon.com/128/2984/2984948.png',
+    title: 'İç Mekan',
+  },
+  {
+    icon: 'https://cdn-icons-png.flaticon.com/128/16486/16486964.png',
+    title: 'Tadilat',
+  },
+  {
+    icon: 'https://cdn-icons-png.flaticon.com/128/15551/15551373.png',
+    title: 'Bakım',
+  },
+];
 
 const Operations = () => {
-  const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: true, threshold: 0.1 });
-  const { ref: ref2, inView: inView2 } = useInView({ triggerOnce: true, threshold: 0.1 });
-  const { ref: ref3, inView: inView3 } = useInView({ triggerOnce: true, threshold: 0.1 });
-  const { ref: ref4, inView: inView4 } = useInView({ triggerOnce: true, threshold: 0.1 });
-  const { ref: ref5, inView: inView5 } = useInView({ triggerOnce: true, threshold: 0.1 });
-  const { ref: ref6, inView: inView6 } = useInView({ triggerOnce: true, threshold: 0.1 });
-
   return (
-    <div className='mt-20 bg-[#f1f1f1]'>
-      <div className='container mx-auto px-6 md:px-20 lg:px-40 xl:px-60 flex flex-col items-center'>
-        <div className='mb-16 mt-16'>
-          <p className='tracking-wide text-lg opacity-75 text-blue-800 text-center'>
-            Birbirinden farklı, kaliteli ve konforlu uygulamalar burada
-          </p>
-        </div>
-        <div className='flex flex-col md:flex-row items-center w-full gap-10 md:gap-20 mb-20'>
-          <div className='w-full md:w-1/2'>
+    <section className="relative bg-gradient-to-br from-cyan-900 via-cyan-700 to-cyan-400 py-16 overflow-hidden">
+      <div className="container mx-auto flex flex-col items-center justify-center px-6">
+        <h2 className="text-3xl md:text-5xl font-extrabold text-white drop-shadow-lg mb-8 text-center">
+          Uygulama <span className="text-yellow-300">Alanlarımız</span>
+        </h2>
+        <p className="tracking-wide text-lg opacity-90 text-cyan-100 text-center mb-12 max-w-2xl">
+          Birbirinden farklı, kaliteli ve konforlu uygulamalar ile yaşam alanlarınızı güzelleştiriyoruz.
+        </p>
+        <div className="flex flex-col md:flex-row items-center w-full gap-10 md:gap-20 mb-20">
+          <div className="w-full md:w-1/2 flex justify-center">
             <img
-              className={`w-full transition-transform duration-1000 ${inView1 ? 'scale-100' : 'scale-90'}`}
+              className="w-full max-w-md rounded-3xl shadow-2xl border-4 border-white/30 object-cover animate-zoomIn"
               src="./tadilat.jpg"
-              alt="img"
-              ref={ref1}
+              alt="Uygulama görseli"
+              loading="lazy"
             />
           </div>
-          <div className='grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-10 lg:gap-28'>
-            <div
-              className={`flex flex-col justify-center items-center transition-opacity duration-1000 ${inView2 ? 'opacity-100' : 'opacity-50'}`}
-              ref={ref2}
-            >
-              <img className='w-12' src="https://cdn-icons-png.flaticon.com/128/7889/7889802.png" alt="design" />
-              <h3 className='text-lg font-semibold'>Tasarım</h3>
-            </div>
-            <div
-              className={`flex flex-col justify-center items-center transition-transform duration-1000 ${inView3 ? 'translate-x-0' : '-translate-x-10'}`}
-              ref={ref3}
-            >
-              <img className='w-12' src="https://cdn-icons-png.flaticon.com/128/3374/3374344.png" alt="design" />
-              <h3 className='text-lg font-semibold'>Dekorasyon</h3>
-            </div>
-            <div
-              className={`flex flex-col justify-center items-center transition-transform duration-1000 ${inView4 ? 'translate-x-0' : 'translate-x-10'}`}
-              ref={ref4}
-            >
-              <img className='w-12' src="https://cdn-icons-png.flaticon.com/128/16456/16456353.png" alt="design" />
-              <h3 className='text-lg font-semibold'>Dış Cephe</h3>
-            </div>
-            <div
-              className={`flex flex-col justify-center items-center transition-opacity duration-1000 ${inView5 ? 'opacity-100' : 'opacity-0'}`}
-              ref={ref5}
-            >
-              <img className='w-12' src="https://cdn-icons-png.flaticon.com/128/2984/2984948.png" alt="design" />
-              <h3 className='text-lg font-semibold'>İç Mekan</h3>
-            </div>
-            <div
-              className={`flex flex-col justify-center items-center transition-transform duration-1000 ${inView6 ? 'scale-100' : 'scale-90'}`}
-              ref={ref6}
-            >
-              <img className='w-12' src="https://cdn-icons-png.flaticon.com/128/16486/16486964.png" alt="design" />
-              <h3 className='text-lg font-semibold'>Tadilat</h3>
-            </div>
-            <div
-              className={`flex flex-col justify-center items-center transition-opacity duration-1000 ${inView6 ? 'opacity-100' : 'opacity-0'}`}
-              ref={ref6}
-            >
-              <img className='w-12' src="https://cdn-icons-png.flaticon.com/128/15551/15551373.png" alt="design" />
-              <h3 className='text-lg font-semibold'>Bakım</h3>
-            </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 lg:gap-12">
+            {operationsData.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-white/20 rounded-2xl shadow-xl p-6 flex flex-col justify-center items-center gap-3 border-2 border-white/30 hover:scale-105 transition-transform duration-300 animate-fadeInUp"
+              >
+                <img className="w-14 h-14 mb-2 filter invert brightness-200" src={item.icon} alt={item.title} loading="lazy" />
+                <h3 className="text-lg font-bold text-yellow-300">{item.title}</h3>
+              </div>
+            ))}
           </div>
         </div>
       </div>
-    </div>
+      {/* Dekoratif arka plan efektleri */}
+      <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-br from-yellow-300/20 to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-1/3 h-1/2 bg-gradient-to-tl from-white/10 to-transparent pointer-events-none" />
+    </section>
   );
-}
+};
 
 export default Operations;

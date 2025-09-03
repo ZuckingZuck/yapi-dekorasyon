@@ -1,61 +1,61 @@
+
 import React from 'react';
-import { useInView } from 'react-intersection-observer';
+
+const whatWeDoData = [
+  {
+    img: './calisma1.jpg',
+    title: 'Konut Çalışmaları',
+    desc: 'Evinizi baştan yaratalım. Size huzurla geçireceğiniz zamanlar teslim edelim.'
+  },
+  {
+    img: './calisma2.jpg',
+    title: 'Kurumsal Çalışmalar',
+    desc: 'Hangi sektörde olursanız olun, profesyonel ve dinamik ekibimizle tüm tadilat ve bakım işleriniz bize emanet. Tasarımlarımıza güvenin.'
+  },
+  {
+    img: './calisma3.jpg',
+    title: 'Ofis Çalışmaları',
+    desc: 'Mevcut ofisinizdeki bakım, tadilat ve güncelleme hizmetlerimizle size daha ferah çalışabileceğiniz alanlar tasarlıyoruz.'
+  },
+  {
+    img: './calisma4.jpg',
+    title: 'Mobilya Uygulamalar',
+    desc: 'Bahçe düzenlemesinden elektrik işlerinize, mobilya değişiminden çatı bakımlarınıza kadar tüm tadilat alanlarında hizmet vermekteyiz.'
+  },
+];
 
 const WhatWeDo = () => {
-  const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: true, threshold: 0.1 });
-  const { ref: ref2, inView: inView2 } = useInView({ triggerOnce: true, threshold: 0.1 });
-  const { ref: ref3, inView: inView3 } = useInView({ triggerOnce: true, threshold: 0.1 });
-  const { ref: ref4, inView: inView4 } = useInView({ triggerOnce: true, threshold: 0.1 });
-
   return (
-    <div className='container mx-auto mt-10 flex flex-col justify-center items-center'>
-        <div className='mb-10'>
-            <h1 className='text-4xl text-gray-600 text-center'>Neler Yapıyoruz</h1>
+    <section className="relative bg-gradient-to-br from-cyan-900 via-cyan-700 to-cyan-400 py-16 overflow-hidden">
+      <div className="container mx-auto flex flex-col items-center justify-center px-6">
+        <h2 className="text-3xl md:text-5xl font-extrabold text-white drop-shadow-lg mb-12 text-center">
+          Neler <span className="text-yellow-300">Yapıyoruz</span>
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
+          {whatWeDoData.map((item, idx) => (
+            <div
+              key={idx}
+              className="bg-white/20 rounded-3xl shadow-2xl p-6 flex flex-col md:flex-row items-center gap-6 border-4 border-white/30 hover:scale-105 transition-transform duration-300 animate-fadeInUp"
+            >
+              <img
+                className="w-full md:w-40 h-40 object-cover rounded-2xl shadow-lg border-2 border-white/40"
+                src={item.img}
+                alt={item.title}
+                loading="lazy"
+              />
+              <div className="flex-1 flex flex-col gap-2 text-center md:text-left">
+                <h3 className="text-2xl md:text-3xl font-bold text-yellow-300 mb-2">{item.title}</h3>
+                <p className="text-cyan-100 text-lg">{item.desc}</p>
+              </div>
+            </div>
+          ))}
         </div>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 px-6 md:px-60 gap-5 text-gray-600'>
-            <div
-              ref={ref1}
-              className={`flex flex-col md:flex-row gap-5 transition-opacity duration-1000 ${inView1 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
-            >
-                <img className='w-full md:w-48' src="./calisma1.jpg" alt="img" />
-                <div>
-                    <h1 className='text-2xl tracking-widest'>Konut Çalışmaları</h1>
-                    <p className='mt-3'>Evinizi baştan yaratalım. size huzurla geçireceğiniz zamanlar teslim edelim.</p>
-                </div>
-            </div>
-            <div
-              ref={ref2}
-              className={`flex flex-col md:flex-row gap-5 transition-opacity duration-1000 ${inView2 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
-            >
-                <img className='w-full md:w-48' src="./calisma2.jpg" alt="img" />
-                <div>
-                    <h1 className='text-2xl tracking-widest'>Kurumsal Çalışmalar</h1>
-                    <p className='mt-3'>Hangi sektörde hizmet veriyor olursanız olun, profesyonel ve dinamik ekibimizle tüm tadilat ve bakım işleriniz bize emanet. Tasarımlarımıza güvenin.</p>
-                </div>
-            </div>
-            <div
-              ref={ref3}
-              className={`flex flex-col md:flex-row gap-5 transition-opacity duration-1000 ${inView3 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
-            >
-                <img className='w-full md:w-48' src="./calisma3.jpg" alt="img" />
-                <div>
-                    <h1 className='text-2xl tracking-widest'>Ofis Çalışmaları</h1>
-                    <p className='mt-3'>Mevcut ofisinizdeki bakım, tadilat ve güncelleme hizmetlerimizle size daha ferah çalışabileceğiniz alanlar tasarlıyoruz.</p>
-                </div>
-            </div>
-            <div
-              ref={ref4}
-              className={`flex flex-col md:flex-row gap-5 transition-opacity duration-1000 ${inView4 ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
-            >
-                <img className='w-full md:w-48' src="./calisma4.jpg" alt="img" />
-                <div>
-                    <h1 className='text-2xl tracking-widest'>Mobilya Uygulamalar</h1>
-                    <p className='mt-3'>Bahçe düzenlemesinden elektrik işlerinize kadar, mobilya değişiminizden çatı bakımlarınıza kadar tüm tadilat alanlarında hizmet vermekteyiz.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+      </div>
+      {/* Dekoratif arka plan efektleri */}
+      <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-br from-yellow-300/20 to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-1/3 h-1/2 bg-gradient-to-tl from-white/10 to-transparent pointer-events-none" />
+    </section>
   );
-}
+};
 
 export default WhatWeDo;
