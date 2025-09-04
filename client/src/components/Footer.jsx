@@ -35,7 +35,7 @@ const Footer = () => {
         <div className="text-center text-sm md:text-lg text-white">
           <p>
             RModel Tüm Hakları Saklıdır.{' '}
-            <a className="underline text-yellow-300 hover:text-white transition" href="https://www.ipssolidarity.com/" target="_blank" rel="noopener noreferrer">
+            <a className="underline text-yellow-300 hover:text-white transition" href="https://www.ipsstech.com.tr" target="_blank" rel="noopener noreferrer">
               IPSS
             </a>{' '}
             tarafından geliştirildi.
