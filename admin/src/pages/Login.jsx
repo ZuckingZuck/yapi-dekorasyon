@@ -37,7 +37,6 @@ const Login = () => {
     <div className="bg-gray-800 min-h-screen w-full text-white flex flex-col items-center justify-center">
       <div className="max-w-lg w-full p-5">
         <div className="flex flex-col items-center mb-6">
-          <img src="https://www.yapidekorasyon.com.tr/wp-content/uploads/2021/08/yapi-dekorasyon.png" alt="login" className="w-52" />
           <h1 className="text-2xl font-bold my-2">Admin / Giriş Yap</h1>
         </div>
         <form className="space-y-4" onSubmit={handleSubmit}>

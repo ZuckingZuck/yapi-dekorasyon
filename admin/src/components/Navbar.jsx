@@ -32,7 +32,7 @@ const Navbar = () => {
           className="text-white text-xl font-bold text-center logo ml-8"
           onClick={handleMenuToggle}
         >
-          Yapı Dekorasyon
+          RModel Admin
         </NavLink>
       </div>
       <div className="flex flex-col justify-between h-full">
